@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 8
+    buildToolsVersion "30.0.3"
+    ndkVersion "22.1.7171670"
+
+    defaultConfig {
+        applicationId "de.jurihock.voicesmith"
+        minSdkVersion 8
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 8
+
+        testApplicationId "de.jurihock.voicesmith.tests"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++17"
+            }
+        }
+
+        testApplicationId "de.jurihock.voicesmith.tests"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.18.1"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.properties'
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+dependencies {
+    implementation project(':greendroid')
+
+    androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation 'org.mockito:mockito-android:3.2.4'
+}

@@ -1,19 +1,10 @@
 # Android auto-generated files
-bin/
-gen/
-libs/
-obj/
-out/
-
-# Eclipse project files
-.settings/
+build/
+.gradle/
+.cxx/
 
 # IntelliJ IDEA project files
 .idea/
-*.[ei]ml
 
 # Miscellaneous files
 local.properties
-*.py[cdo]
-*.raw
-*.wav

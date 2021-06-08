@@ -1,0 +1,5 @@
+include ':app'
+include ':greendroid'
+
+project(':greendroid').projectDir = new File(rootDir, '../greendroid/GreenDroid/app')
+

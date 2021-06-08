@@ -53,6 +53,9 @@ public abstract class MockableServiceTestCase<T extends Service> extends Service
     {
         super.startService(intent);
         serviceInstance = getService();
+
+        if (System.getProperty("org.mockito.android.target") == null)
+            System.setProperty("org.mockito.android.target", serviceInstance.getApplicationContext().getApplicationContext().getCacheDir().getPath());
     }
 
     protected void startService()

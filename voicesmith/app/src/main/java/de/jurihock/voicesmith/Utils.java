@@ -41,7 +41,7 @@ import android.widget.Toast;
 
 public final class Utils
 {
-	private static final String				NATIVELIB_NAME	= "Voicesmith";
+	private static final String				NATIVELIB_NAME	= "voicesmith";
 	private static final String				LOGCAT_TAG		= "Voicesmith";
 	private static final int				TOAST_LENGTH	= Toast.LENGTH_LONG;
 
@@ -64,16 +64,7 @@ public final class Utils
 	 * */
 	public static void loadNativeLibrary()
 	{
-		try
-		{
-			System.loadLibrary(NATIVELIB_NAME);
-		}
-		catch (UnsatisfiedLinkError exception)
-		{
-            Log.d(LOGCAT_TAG, String.format(
-                    "Native library %s could not be loaded!",
-                    NATIVELIB_NAME));
-		}
+            System.loadLibrary(NATIVELIB_NAME);
 	}
 
     public String getVersionString(int formatResId)
