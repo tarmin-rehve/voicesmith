@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.VoiceSmith" parent="@style/Theme.GreenDroid.NoTitleBar">
+
+        <item name="gdActionBarBackground">@drawable/action_bar_tint</item>
+        <item name="gdActionBarColorstripBackground">@drawable/action_bar_colorstrip</item>
+
+    </style>
+</resources>
