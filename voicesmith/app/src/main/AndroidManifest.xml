@@ -17,7 +17,7 @@
         android:name=".Application"
         android:icon="@drawable/launcher"
         android:label="@string/ApplicationName"
-        android:theme="@style/Theme.GreenDroid.NoTitleBar" >
+        android:theme="@style/Theme.VoiceSmith" >
         <service
             android:name=".services.DafxService"
             android:label="@string/DafxService" >
